@@ -45,7 +45,7 @@ Time: 30 days
 
 Description: We will build a wrapper around dkg-client which exposes all the functionality of the dkg-client SDK, but doesn't require the developer to add transaction signing and provides custodial wallet support, gasless transactions, full transaction-oriented analytics & human readable transaction previews.
 
-## Milestone #2 | HTTP-based backed signer & TX manager
+### Milestone #2 | HTTP-based backed signer & TX manager
 
 Time: 30 days
 
