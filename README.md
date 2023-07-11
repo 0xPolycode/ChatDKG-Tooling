@@ -37,3 +37,17 @@ Benefits
 * Get subsidized gas & token costs or pay them with a simple credit card tx.
 * Hide the blockchain from users.
 
+## Milestones
+
+### Milestone #1 | SDK Wrapper around dkg-client functions
+
+Time: 30 days
+
+Description: We will build a wrapper around dkg-client which exposes all the functionality of the dkg-client SDK, but doesn't require the developer to add transaction signing and provides custodial wallet support, gasless transactions, full transaction-oriented analytics & human readable transaction previews.
+
+## Milestone #2 | HTTP-based backed signer & TX manager
+
+Time: 30 days
+
+Description: We will build an HTTP-based signer, which enable teams to automate the interaction with Knowledge Graphs through any HTTP-enabled device, including mobile apps, bakend apps, IoT/Hardware devices, etc... 
+
