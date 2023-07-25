@@ -86,5 +86,6 @@ dkg.asset.create(yewmakerol, { epochsNum: 5 }).then(result => {
 
 ## Signers
 
-![Polyflow](https://github.com/0xpolyflow/ChatDKG-Tooling/assets/129866940/6eb8f1b9-849f-411b-b9c7-722a42bebb2b)
+![Polyflow Architecture](https://github.com/0xpolyflow/ChatDKG-Tooling/assets/129866940/3bc799cf-8bdf-4c40-bda8-18aa94342a86)
+
 
