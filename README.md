@@ -86,6 +86,28 @@ dkg.asset.create(yewmakerol, { epochsNum: 5 }).then(result => {
 
 ## Signers
 
+The developer uses the Polyflow dashboard to choose between several signer types. A signer will take a raw blockchain transaction, sign it and deploy it to the blockchain. It will then wait for the transcation to finish and tell the SDK that the action is complete.
+
 ![Polyflow Architecture](https://github.com/0xpolyflow/ChatDKG-Tooling/assets/129866940/3bc799cf-8bdf-4c40-bda8-18aa94342a86)
+
+The developers have a choice between two types of signers:
+* Polyflow SDK Widget Signer - Frontend
+* Backend/HTTP Signer
+
+### Widget Signer
+
+The SDK Widget signer will take all the heavy lifting from the developer and open a user-friendly widget to users when they need to sign the blockchain transaction. The widget also supports many user friendly features:
+* Login with email
+* Autofunding (Gasless transactions)
+
+In this way, the widget can hide the complexity of blockchain interaction from both the user and developer. All the complex heavy lifting is handled by Polyflow.
+
+<img width="351" alt="Screenshot 2023-07-25 at 18 42 04" src="https://github.com/0xpolyflow/ChatDKG-Tooling/assets/129866940/c4f08678-1c01-4234-a2ef-f2d77b2716ed">
+
+### Backend/HTTP signer
+
+The backend signer enables any developer to send raw transactions to a signer which holds the private keys for one or more accounts. The signer then signs those transactions, deploys them to the blockchain and fetches the result.
+
+This is great for people building backends which interact with blockchain, builing bots which automate interactions with blockchain *or* who are builing frontend apps, but want to authorize their users with their own auth, instead of blockchain private keys.
 
 
