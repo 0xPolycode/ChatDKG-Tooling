@@ -51,3 +51,36 @@ Time: 30 days
 
 Description: We will build an HTTP-based signer, which enable teams to automate the interaction with Knowledge Graphs through any HTTP-enabled device, including mobile apps, bakend apps, IoT/Hardware devices, etc... 
 
+# Case / Example
+
+In this example, we will demonstrate the abilities of the Polyflow Code SDK wrapper & infra on an example from the 3rd ChatDKG Office Hours. We will explore the case of adding the pamphlet information for the imaginary drug `yewmakerol` to the Knowledge Graph - but this time, from a perspective of an AI engineer (or any other Web2 developer) who is not familiar with anything blockchain related.
+
+The example is very simple:
+
+1. The developer will create a new Polyflow Code project - and get an API Key
+2. The developer will use `npm` to install the `polyflow` SDK and the `origintrail` extension.
+3. The developer calls the exposed methods.
+
+```js
+import Polyflow from '@polyflow/core'
+import DKG from '@polyflow/origintrail'
+
+const sdk = new Polyflow('api-key')
+
+// The DKG SDK is now created as a wrapper around the Polyflow SDK. The developer uses the Polyflow
+// dashboard to set up RPC endpoints, DKG enpoints and selects the signer.
+//
+// The signer can be a frontend widget signer *or* a backend signer. The frotnend signer is great for native
+// Web3 apps, while the backend signer is great for backend apps, bot automation & frontend apps which want to use
+// the 
+const dkg = new Polyflow.DKG(sdk)
+
+const yewmakerol = JSON.parse('./path/to/yewmakerol.json')
+
+dkg.asset.create(yewmakerol, { epochsNum: 5 }).then(result => {
+  // this callback is called after the asset has been signed, added to the DKG and updated on the blockchain
+  console.log(result)
+})
+
+```
+
