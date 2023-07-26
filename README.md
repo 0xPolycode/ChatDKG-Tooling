@@ -72,7 +72,7 @@ const sdk = new Polyflow('api-key')
 //
 // The signer can be a frontend widget signer *or* a backend signer. The frotnend signer is great for native
 // Web3 apps, while the backend signer is great for backend apps, bot automation & frontend apps which want to use
-// the 
+// existing user role management and auth systems.
 const dkg = new DKG(sdk)
 
 const yewmakerol = JSON.parse('./path/to/yewmakerol.json')
